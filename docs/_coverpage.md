@@ -1,4 +1,6 @@
-![logo](_media/icon.png) 
+#​ :100:
+![logo](_1media/icon.png) 
+
 # chaos docs  🤖 ​<small>0.1</small>:sweat_smile:
 > 一个神奇的文档网站生成器。
 
