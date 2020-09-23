@@ -1,7 +1,7 @@
-#​ :100:
-![logo](_1media/icon.png) 
 
-# chaos docs  🤖 ​<small>0.1</small>:sweat_smile:
+![logo](_1media\favicon.ico) 
+
+# chaos docs  🤖 ​<small>0.1</small>
 > 一个神奇的文档网站生成器。
 
 - 简单、轻便 (压缩后 ~21kB)  
@@ -11,5 +11,3 @@
 
 [GitHub](https://github.com/docsifyjs/docsify/) 
 [Get Started](#docsify)
-
-:sweat_smile:
