@@ -1,5 +1,5 @@
 ![logo](_media/icon.png) 
-# chaos docs  <big>:cn:</big> ​<small>0.1</small>
+# chaos docs  🤖 ​<small>0.1</small>
 > 一个神奇的文档网站生成器。
 
 - 简单、轻便 (压缩后 ~21kB) 
