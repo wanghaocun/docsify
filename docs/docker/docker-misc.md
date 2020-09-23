@@ -46,7 +46,7 @@ docker rm $(docker ps -aq)
 
 > 清理所有悬挂（``）镜像：
 
-```sh
+```bash
 docker image prune
 # or
 docker rmi $(docker images -qf "dangling=true")
@@ -54,7 +54,7 @@ docker rmi $(docker images -qf "dangling=true")
 
 > 清理所有无用数据卷：
 
-```sh
+```shell
 docker volume prune
 ```
 
