@@ -1,5 +1,5 @@
-![logo](https://raw.githubusercontent.com/wanghaocun/wanghaocun-blog-media/master/img/20200923140914.svg%252Bxml) 
-# docsify <small>3.5</small>
+![logo](_media/icon.png) 
+# chaos docs  <small>0.1</small>
 > 一个神奇的文档网站生成器。
 
 - 简单、轻便 (压缩后 ~21kB) 
