@@ -38,7 +38,7 @@ docker run -it --rm image:tag --verbose --help
 
 > 清理所有停止运行的容器：
 
-```sh
+```docker
 docker container prune
 # or
 docker rm $(docker ps -aq)
