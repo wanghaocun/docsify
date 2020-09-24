@@ -4,7 +4,7 @@
 ## time zone issue
 参考笔记 [《Docker 时区调整方案》](http://note.youdao.com/noteshare?id=7f541ca3b715591c2d76e7a96325009f&sub=C739A09EFFA746B2AE360F27EC5140A1)
 - Dockerfile构建重写
-```
+```dockerfile
 ...
 RUN mkdir -p /some/path \
     && chmod 777 /some/path \
@@ -16,7 +16,7 @@ RUN mkdir -p /some/path \
 ...
 ```
 - run 加环境变量 -e TZ（并非所有容器都生效）
-```
+```docker
 docker run ... \
 =====================
 -e TZ=Asia/Shanghai \
@@ -28,7 +28,7 @@ docker run ... \
 ### docker_practice
 [online](https://vuepress.mirror.docker-practice.com/)  
 [offline](https://github.com/yeasy/docker_practice/wiki/%E7%A6%BB%E7%BA%BF%E9%98%85%E8%AF%BB%E5%8A%9F%E8%83%BD%E8%AF%A6%E8%A7%A3)
-```sh
+```docker
 # 为了保持内容为最新，建议每次阅读前先 pull 最新镜像
 
 # GitBook 格式
@@ -41,7 +41,7 @@ docker run -d -p 24000:80 --name docker_practice_vuepress  ccr.ccs.tencentyun.co
 ```
 
 ### docker/getting-started
-```
+```docker
 docker pull docker/getting-started
 docker run -d -p 34000:80 --name docker-getting-started docker/getting-started
 ```
@@ -81,7 +81,7 @@ docker run -d -p 34000:80 --name docker-getting-started docker/getting-started
 [custom.cnf](http://note.youdao.com/noteshare?id=909efdec4e372b8119ad834c73924a17)
 ### 8(latest)
 
-```sh
+```bash
 # Windows cmd
 docker run -d -p 3306:3306 \
 -v a:/Docker/mysql/conf/custom.cnf:/etc/mysql/conf.d/custom.cnf \
@@ -158,7 +158,7 @@ log_timestamps = SYSTEM
 ```
 
 ### 5.7
-```
+```docker
 docker run -d -p 3306:3306  \
 -v a:/Docker/mysql/conf/custom.cnf:/etc/mysql/conf.d/custom.cnf \
 -v a:/Docker/mysql/data:/var/lib/mysql \
@@ -220,7 +220,7 @@ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock assaflavie/runlike 
 > [my conf](http://note.youdao.com/noteshare?id=16d350cf644fb17b31599b7ce12ca207)
 >
 >  常用参数：
->```
+>```pseudocode
 >  # 网络开放
 >  bind 0.0.0.0
 >  # 端口号
@@ -247,7 +247,7 @@ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock assaflavie/runlike 
 ## mongo
 > 基于`Ubuntu`构建  
 [docker hub info](https://hub.docker.com/_/mongo)
-```
+```docker
 docker network create dev
 
 # 简单启动mongo服务实例
@@ -257,7 +257,7 @@ docker run -d -p 27017:27017 -v /a/Docker/mongo/data:/data/db -e MONGO_INITDB_RO
 
 ## mongo-express
 [docker hub info](https://hub.docker.com/_/mongo-express)
-```sh
+```docker
 # 简单启动mongo-express服务实例
 docker run -d -p 8081:8081 -e ME_CONFIG_MONGODB_ADMINUSERNAME=root -e ME_CONFIG_MONGODB_ADMINPASSWORD=123456 -e ME_CONFIG_BASICAUTH_USERNAME=admin -e ME_CONFIG_BASICAUTH_PASSWORD=123456 -e ME_CONFIG_OPTIONS_EDITORTHEME=monokai --name mongo-express --network dev --restart=always mongo-express
 ```
@@ -265,7 +265,7 @@ docker run -d -p 8081:8081 -e ME_CONFIG_MONGODB_ADMINUSERNAME=root -e ME_CONFIG_
 ## rabbitmq
 > 基于`Ubuntu`构建  
 [admin-guide](https://www.rabbitmq.com/admin-guide.html)
-```
+```bash
 # [rabbitmq:3-management]带web管理
 # 制定USER/PASS不会创建guest用户
 # -e TZ="Asia/Shanghai" 不生效
@@ -302,7 +302,7 @@ rabbitmqctl delete_vhost /mall
 ```
 
 user tags
-```
+```pseudocode
 Comma-separated list of tags to apply to the user. Currently supported by the management plugin:
 
 management
@@ -350,7 +350,7 @@ docker restart elasticsearch
 > 基于`CentOS`构建  
 [docker hub info](https://hub.docker.com/_/logstash)
 
-```
+```docker
 docker run -d -p 4560:4560 -p 4561:4561 -p 4562:4562 -p 4563:4563 \
 -v a:/docker/logstash/conf/logstash.conf:/usr/share/logstash/pipeline/logstash.conf \
 -e TZ=Asia/Shanghai \
@@ -366,7 +366,7 @@ logstash-plugin install logstash-codec-json_lines
 > 基于`CentOS`构建  
 [docker hub info](https://hub.docker.com/_/kibana)  
 
-```
+```docker
 # 使用es网络内部连接
 docker run -d -p 5601:5601 \
 -e TZ=Asia/Shanghai \
