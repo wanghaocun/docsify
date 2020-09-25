@@ -12,4 +12,4 @@
 - :kissing_smiling_eyes: 轻便 
 
 [GitHub](https://github.com/wanghaocun/docsify/) 
-[Get Started](/)
+[Get Started](/#/docker/)
