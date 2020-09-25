@@ -12,4 +12,5 @@
 - :kissing_smiling_eyes: 轻便 
 
 [GitHub](https://github.com/wanghaocun/docsify/) 
-[Get Started](/#/docker/)
+[Get Started](/#/docker/?id=time-zone-issue)
+
